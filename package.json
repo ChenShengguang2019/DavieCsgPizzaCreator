@@ -1,0 +1,53 @@
+{
+  "name": "pizzacreator",
+  "version": "1.0.0",
+  "description": "pizza creator project",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start:dev": "webpack-dev-server",
+    "clean": "rm -rf ./dist",
+    "prebuild": "npm run clean",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChenShengguang2019/DavieCsgPizzaCreator.git"
+  },
+  "keywords": [
+    "pizza"
+  ],
+  "author": "Davie Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChenShengguang2019/DavieCsgPizzaCreator/issues"
+  },
+  "homepage": "https://github.com/ChenShengguang2019/DavieCsgPizzaCreator#readme",
+  "dependencies": {
+    "autoprefixer": "^9.6.1",
+    "babel-standalone": "^6.26.0",
+    "browserslist": "^4.6.6",
+    "file-loader": "^4.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.38.0",
+    "webpack-cli": "^3.3.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.6.1",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.1.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack-dev-server": "^3.7.2"
+  }
+}
