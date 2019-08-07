@@ -10,7 +10,9 @@ module.exports = {
         path: path.resolve(DIST_DIR),
         filename: '[name].js'
     },
-    resolve: {
+    //react 调试工具
+    devtool: 'source-map',
+    resolve: {//指定可以被import的文件名后缀
         extensions: ['.js', '.jsx'],
       },
     // mode: 'development',
@@ -23,12 +25,12 @@ module.exports = {
                         loader: 'url-loader',
                         options: { limit: 8192 }
                     },
-                    {
-                        loader: 'file-loader',
-                        query: {
-                            name: 'assets/[hash].[ext]'
-                        }
-                    }
+                    // {
+                    //     loader: 'file-loader',
+                    //     query: {
+                    //         name: 'assets/[hash].[ext]'
+                    //     }
+                    // }
                 ]
             },
             {
@@ -58,10 +60,17 @@ module.exports = {
             }
         ]
     },
+        //4、服务器依赖包配置
+        devServer: {//注意：网上很多都有colors属性，但是实际上的webpack2.x已经不支持该属性了
+            contentBase: DIST_DIR,//本地服务器所加载的页面所在的目录
+            historyApiFallback: true,//不跳转
+            inline: true//实时刷新
+        },
     plugins: [
         new HtmlWebpackPlugin({
             template: `${SOURCE_DIR}/index.html`,
             inject: true
         })
     ]
+
 }
