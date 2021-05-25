@@ -26,7 +26,7 @@
   "dependencies": {
     "autoprefixer": "^9.6.1",
     "babel-standalone": "^6.26.0",
-    "browserslist": "^4.6.6",
+    "browserslist": "^4.16.5",
     "file-loader": "^4.1.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
